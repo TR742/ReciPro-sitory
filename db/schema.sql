@@ -1,1 +1,2 @@
-dssaf
+DROP DATABASE IF EXISTS recipro_db;
+CREATE DATABASE recipro_db;
