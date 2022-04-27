@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('');
-const sequelize = require('');
+const { Model, DataTypes } = require('sequalize');
+const sequelize = require('../config/connection');
 
 class Recipe extends Model {}
 
