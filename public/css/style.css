@@ -1,3 +1,11 @@
 body {
-    font-family: cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header {
+    display: inline;
+}
+
+.header h1 {
+    text-align: center;
 }
