@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "username": "TestUser",
-        "recipe_ingedients": "test@email.com",
+        "name": "TestUser",
+        "email": "test@email.com",
         "password": "testPassword69;)"
     }
 ]
