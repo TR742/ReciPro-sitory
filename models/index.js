@@ -23,3 +23,4 @@ Recipe.belongsTo(User, {
 
 
 module.exports = { User, Recipe };
+

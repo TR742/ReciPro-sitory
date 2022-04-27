@@ -1,21 +1,38 @@
 const router = require('express').Router();
+const { Recipe, User } = require('../models');
 
 router.get('/', async (req, res) => {
-    try {
-      res.render('homepage');
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+  try {
 
-  router.get('/login', (req, res) => {
-    // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
-      res.redirect('/profile');
-      return;
-    }
-  
-    res.render('login');
-  });
+    // const recipeData = await Recipe.findAll({
+    //   include: [
+    //     {
+    //       model: User,
+    //       attributes: ['name'],
+    //     },
+    //   ],
+    // });
 
-  module.exports = router
+    // const recipes = recipeData.map((project) => project.get({ plain: true }));
+
+    res.render('homepage',
+    //   recipes,
+    //   logged_in: req.session.logged_in
+    // }
+    );
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('login');
+});
+
+module.exports = router
