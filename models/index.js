@@ -6,4 +6,4 @@ User.hasMany(recipe, {
 
 });
 
-module.exports = { User, Recipe };
+ module.exports = { User, Recipe };
