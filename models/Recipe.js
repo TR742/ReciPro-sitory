@@ -19,7 +19,14 @@ Recipe.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-   
+   recipe_description: {
+       type: DataType.STRING,
+       allowNull: false,
+   },
+   recipe_category: {
+       type: DataType.STRING,
+       allowNull: false,
+   },
 },
 {
     sequelize,
