@@ -32,22 +32,22 @@
     </form>
   </div>
 
-  {{!-- {{#if projects.length}}
+  {{#if recipes.length}}
   <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+    <h3>Current Recipes:</h3>
 
-    {{#each projects as |project|}}
+    {{#each recipes as |recipe|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+        <h4><a href="/project/{{recipe.id}}">{{recipe.name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
   </div>
   {{/if}}
-</div> --}}
+</div>
 
-<script src="./js/profile.js"></script>
+<script src="./js/recipeLogic.js"></script>

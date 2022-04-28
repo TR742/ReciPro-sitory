@@ -26,7 +26,7 @@ Recipe.init(
         recipe_category: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
+        }
     },
 {
     sequelize,
