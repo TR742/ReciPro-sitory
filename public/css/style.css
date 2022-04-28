@@ -1,10 +1,14 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(/img/cooking.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 label {
     display: inline-block;
-    width: 100px;
+    width: 150px;
 }
 
 .logpanel {
@@ -128,6 +132,23 @@ label {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
+  }
+
+  #new {
+    padding: 5px 0px;
+    width: 80%;
+    height: 325px;
+    margin: auto;
+    background-color: beige;
+    text-shadow: 1px 1px 1px lightblue;
+    border-radius: 2%;
+    box-shadow: -2px 2px 30px lightblue;
+    border: 5px ridge lightblue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
 @media screen and (max-width: 768px) {
