@@ -19,7 +19,8 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/createrecipe">Create Recipe</a> |
+        <a href="/createrecipe">Create Recipe</a>
+        <a href="/recipe">Recipes</a>
         <button class="no-button" id="logout">Logout</button>
         {{else}}
         <a href="/login">login</a>
