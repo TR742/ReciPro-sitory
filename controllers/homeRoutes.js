@@ -23,6 +23,15 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/createrecipe", async (req, res) => {
+  try {
+    res.render("createrecipe");
+  } catch
+  (err) {
+    res.status(500).json(err)
+  }
+});
+
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
