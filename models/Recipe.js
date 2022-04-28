@@ -28,14 +28,13 @@ Recipe.init(
             allowNull: false,
         }
     },
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'recipe'
-    }
-);
+{
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'recipe',
+  });
 
 
 module.exports = Recipe;
