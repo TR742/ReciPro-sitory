@@ -4,18 +4,19 @@ const newFormHandler = async (event) => {
     const name = document.querySelector('#recipe-name').value.trim();
     const ingredients = document.querySelector('#recipe-ingredients').value.trim();
     const description = document.querySelector('#recipe-description').value.trim();
+    const category = document.querySelector('#recipe-category').value.trim();
   
-    if (name && ingredients && description) {
+    if (name && ingredients && description && category) {
       const response = await fetch(`/api/recipes`, {
         method: 'POST',
-        body: JSON.stringify({ name, needed_funding, description }),
+        body: JSON.stringify({ recipe_name, recipe_ingredients, recipe_description, recipe_category }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.replace('/recipes');
+        document.location.replace('/createrecipe');
       } else {
         alert('Failed to create project');
       }

@@ -25,7 +25,29 @@ router.get("/", async (req, res) => {
 
 router.get("/createrecipe", async (req, res) => {
   try {
-    res.render("createrecipe");
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Recipe }],
+    });
+
+    const recipeData = await Recipe.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+
+    const user = userData.get({ plain: true });
+
+    res.render('createrecipe', {
+      ...user,
+      logged_in: true,
+      recipes
+    });
   } catch
   (err) {
     res.status(500).json(err)
