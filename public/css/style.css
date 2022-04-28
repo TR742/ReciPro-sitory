@@ -81,42 +81,42 @@ label {
 }
 
 #chicken {
-    background-image: url(./img/chicken.jpeg);
+    background-image: url(/img/chicken.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #beef {
-    background-image: url(./img/beef.webp);
+    background-image: url(/img/beef.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #fish {
-    background-image: url(./img/fish.jpeg);
+    background-image: url(/img/fish.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #pork {
-    background-image: url(./img/pork.jpeg);
+    background-image: url(/img/pork.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #veggie {
-    background-image: url(./img/veggies.jpeg);
+    background-image: url(/img/veggies.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #other {
-    background-image: url(./img/desserts.jpeg);
+    background-image: url(/img/desserts.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
