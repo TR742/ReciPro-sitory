@@ -54,9 +54,13 @@ router.get("/createrecipe", async (req, res) => {
   }
 });
 
-router.get('/recipes', async (req, res) => {
+router.get('/recipes/:category', async (req, res) => {
   try {
-    const recipeData = await Recipe.findAll()
+    const recipeData = await Recipe.findAll({
+      where: {
+        category: req.params.category
+      }
+    })
 console.log(recipeData)
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
