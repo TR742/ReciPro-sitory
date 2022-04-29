@@ -1,24 +1,15 @@
-<h1>Recipes:</h1>
+<div>
 {{#if recipes.length}}
-  <div class="col-md-6 recipe-list">
-    <h3>Current Recipes:</h3>
-
-    {{#each recipes as |recipe|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4 href="/recipe/{{recipe.id}}">{{recipe.category}}</h4>
-        <h4 href="/recipe/{{recipe.id}}">{{recipe.name}}</h4>
-        <h4 href="/recipe/{{recipe.id}}">{{recipe.ingredients}}</h4>
-        <h4 href="/recipe/{{recipe.id}}">{{recipe.description}}</h4>
-      </div>
-      <div class="col-md-4">
-      </div>
+{{#each recipes as |recipe|}}
+    <div id="pies">
+      <h2 href="/recipe/{{recipe.id}}">{{recipe.name}}</h2>
+      <h4>Ingregidents:</h4>
+      <p href="/recipe/{{recipe.id}}">{{recipe.ingredients}}</p>
+      <h4>Description: </h4>
+      <p href="/recipe/{{recipe.id}}">{{recipe.description}}</p>
     </div>
-    {{/each}}
-  </div>
+  {{/each}}
   {{/if}}
 </div>
 
-  <p>Created by {{user.name}} on</p>
-
-  <script src="./js/recipeLogic.js"></script>
+<script src="./js/recipeLogic.js"></script>

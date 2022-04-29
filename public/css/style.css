@@ -11,6 +11,33 @@ label {
     width: 150px;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: blue;
+}
+
+a:visited {
+    color: black;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 5px ridge lightblue;
+    margin-bottom: 50px;
+}
+
+.header a {
+    padding-right: 10px;
+}
+
 .logpanel {
     background-color: beige;
     border: 5px ridge lightblue;
@@ -50,6 +77,28 @@ label {
     border: 3px ridge lightblue;
 }
 
+.category:hover {
+    box-shadow: -2px 2px 30px 35px lightblue;
+}
+
+#pies {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    width: 50%;
+    margin: auto;
+    background-color: beige;
+    text-shadow: 1px 1px 1px 30px lightblue;
+    box-shadow: -2px 2px 30px lightblue;
+    border: 5px ridge lightblue;
+    margin-top: 35px
+    ;
+}
+
+#pies h2 {
+    text-align: center;
+}
+
 #background-video {
     width: 100vw;
     height: 100vh;
@@ -72,16 +121,16 @@ label {
 
 #welcome {
     padding: 10px 0px;
-    width: 80%;
+    width: 65%;
     height: 185px;
     text-align: center;
     margin: auto;
     background-color: beige;
-    text-shadow: 1px 1px 1px lightblue;
-    border-radius: 5%;
+    text-shadow: 1px 1px 1px 30px lightblue;
     box-shadow: -2px 2px 30px lightblue;
     text-align: center;
     border: 5px ridge lightblue;
+    border-radius: 50%;
 }
 
 #chicken {
@@ -134,9 +183,9 @@ label {
       justify-content: space-evenly;
   }
 
-  #new {
+#new {
     padding: 5px 0px;
-    width: 80%;
+    width: 60%;
     height: 325px;
     margin: auto;
     background-color: beige;
@@ -149,11 +198,11 @@ label {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  }
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .logpanel {
-        width: 100%;
+        width: 80%;
     }
     
     #welcome {
