@@ -1,14 +1,7 @@
-<div class="text-center">
-  <h2>{{recipe_name}}</h2>
-  <p>{{{recipe_category}}}</p>
-  <p>{{recipe_description}}</p>
+<h1>Recipes:</h1>
+ <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a>
+  <h2>{{recipe.recipe_name}}</h2>
+  <p>{{{recipe.recipe_category}}}</p>
+  <p>{{recipe.recipe_description}}</p>
+
   <p>Created by {{user.name}} on</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount"></span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div>
