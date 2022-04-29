@@ -1,15 +1,15 @@
 <h1>Recipes:</h1>
 {{#if recipes.length}}
-  <div class="col-md-6 project-list">
+  <div class="col-md-6 recipe-list">
     <h3>Current Recipes:</h3>
 
     {{#each recipes as |recipe|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/recipe/{{recipe.id}}">{{recipe.category}}</a></h4>
-        <h4><a href="/recipe/{{recipe.id}}">{{recipe.name}}</a></h4>
-        <h4><a href="/recipe/{{recipe.id}}">{{recipe.ingredients}}</a></h4>
-        <h4><a href="/recipe/{{recipe.id}}">{{recipe.description}}</a></h4>
+        <h4 href="/recipe/{{recipe.id}}">{{recipe.category}}</h4>
+        <h4 href="/recipe/{{recipe.id}}">{{recipe.name}}</h4>
+        <h4 href="/recipe/{{recipe.id}}">{{recipe.ingredients}}</h4>
+        <h4 href="/recipe/{{recipe.id}}">{{recipe.description}}</h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>
@@ -21,3 +21,5 @@
 </div>
 
   <p>Created by {{user.name}} on</p>
+
+  <script src="./js/recipeLogic.js"></script>
