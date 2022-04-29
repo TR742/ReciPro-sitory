@@ -15,6 +15,28 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/recipes', async (req, res) => {
+  try {
+    const recipeData = await Recipe.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+
+    res.render('recipe', {
+      ...recipes,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({

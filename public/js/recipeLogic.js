@@ -9,7 +9,7 @@ const newFormHandler = async (event) => {
     if (name && ingredients && description && category) {
       const response = await fetch(`/api/recipes`, {
         method: 'POST',
-        body: JSON.stringify({ recipe_name, recipe_ingredients, recipe_description, recipe_category }),
+        body: JSON.stringify({ name, ingredients, description, category }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -18,7 +18,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/createrecipe');
       } else {
-        alert('Failed to create project');
+        alert('Failed to create recipe');
       }
     }
   };

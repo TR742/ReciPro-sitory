@@ -1,9 +1,9 @@
 [
     {
         "id": 1,
-        "recipe_name": "Good Food",
-        "recipe_ingredients": "Ingredients",
-        "recipe_description": "hi there",
-        "recipe_category": "bye there"
+        "name": "Good Food",
+        "ingredients": "Ingredients",
+        "description": "hi there",
+        "category": "bye there"
     }
 ]
