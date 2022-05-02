@@ -34,12 +34,12 @@
 
   {{#if recipes.length}}
   <div class="col-md-6 recipe-list">
-    <h3>Current Recipes:</h3>
+    <h3>My Recipes</h3>
 
     {{#each recipes as |recipe|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/recipe/{{recipe.id}}">{{recipe.name}}</a></h4>
+        <h4>{{recipe.name}}</h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>

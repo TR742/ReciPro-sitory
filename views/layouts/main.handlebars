@@ -20,9 +20,9 @@
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/createrecipe">Create Recipe</a>
-        <button class="no-button" id="logout">Logout</button>
+        <a class="no-button" id="logout">Logout</a>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
